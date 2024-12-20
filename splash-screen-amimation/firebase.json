@@ -1,6 +1,12 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "dist/splash-screen-amimation",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
