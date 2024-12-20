@@ -1,0 +1,16 @@
+<div
+	class="light"
+	[style.--x-start]="this.point.xStart + 'px'"
+	[style.--x-end]="this.point.xEnd + 'px'"
+	[style.--y-start]="this.point.yStart + 'px'"
+	[style.--y-end]="this.point.yEnd + 'px'"
+	[class.animate]="isAnimating"
+>
+</div>
+<p
+	*ngIf="animationStepIndex == AnimationSteps.SHOW_TEXT"
+	class="help-message"
+	[style.--message-top]="this.messageTop + 'px'"
+>
+	{{helpMessage}}
+</p>

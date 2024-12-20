@@ -1,0 +1,34 @@
+.light {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	transition: all 2s ease-in-out;
+	opacity: 85%;
+	background:
+		linear-gradient(to right, rgba(0, 0, 0, 1) var(--x-start), transparent 0%, transparent var(--x-end), rgba(0, 0, 0, 1) 0%),
+		linear-gradient(to bottom, rgba(0, 0, 0, 1) var(--y-start), transparent 0%, transparent var(--y-end), rgba(0, 0, 0, 1) 0%);
+}
+
+.light.animate {
+	transition: --x-start 2s ease-in-out, --x-end 2s ease-in-out, --y-start 2s ease-in-out, --y-end 2s ease-in-out;
+}
+
+.help-message {
+	position: absolute;
+	top: var(--message-top);
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #ff6922;
+	font-size: 2rem;
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.help-message {
+		font-size: 2.5rem;
+		width: 90%;
+	}
+}
